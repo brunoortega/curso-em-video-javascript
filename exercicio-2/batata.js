@@ -40,4 +40,4 @@ function carregar() {
         header[0].style.color = "white";
         header[1].style.color = "white";
     }
-}zz
+}
