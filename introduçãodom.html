@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com a DOM</title>
+    <style>
+
+        body {
+            background: rgb(158, 158, 21);
+            color: white;
+            text-align: center;
+            margin-top: 10%;
+        }
+
+        div#area {
+            background-color: #892be246;
+            background-size: cover;
+            background-position: center;
+            height: 150px;
+            width: 150px;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            padding: 100px;
+            display: block;
+            border-radius: 50%;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <p><strong>Eu gosto de batatas</strong></p>
+    <div id='eita'>
+        <h1>brunoortegalindo</h1>
+            <div id="area" onclick="clicar()" onmouseover="entrar()" onmouseout="sair()"></div>
+            </div>
+        <p><strong>Eu gosto de batatas</strong></p>
+    </div>
+
+    <script>
+        var p1 = document.getElementsByTagName('p')[0];
+        p1.style.color = 'black';    
+        p2 = p1.innerHTML;
+        p2.style.color = 'black';
+        document.write(p2);
+        var b = 0;
+
+
+        function entrar() {
+            var a = document.querySelector('#area');
+            a.innerHTML = '<strong>ENTROU!</strong>';
+            a.style.font = 'normal bold 30px arial, serif';
+            a.style.color = 'white';
+            b = 0;
+        }
+
+        function clicar() {
+            var a = document.querySelector('#area');
+            a.style.font = 'normal 20px Lucida Console';
+            if (a.innerText =='ENTROU!') {
+                a.innerHTML = '<strong>CLICOU!</strong>';
+                b = 1;
+
+
+            } else {
+                a.innerHTML +='<br><strong>CLICOU!</strong>';  
+                b++;              
+
+            }
+        }
+
+        function sair() {
+            var a = document.querySelector('#area');
+            a.style.font = '20px Georgia';
+            a.style.color = 'Yellow';
+            if (b == 0) {
+                a.innerHTML = '<strong>SAIU E NÃO CLICOU NENHUMA VEZ!</strong>';
+            } 
+            else if (b == 1) {
+                a.innerHTML = `<strong>SAIU E CLICOU UMA VEZ!</strong>`;
+            }
+            else {                
+                a.innerHTML = `<strong>SAIU E CLICOU ${b} VEZES!</strong>`;
+            }
+        }
+        //query selector: classe é . e id é #
+    </script>
+
+</body>
+</html>
