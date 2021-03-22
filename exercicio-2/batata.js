@@ -14,7 +14,7 @@ function carregar() {
 
     var header = document.querySelectorAll(".batata");
     
-    if (hora >= 0 && hora < 12) {
+    if (hora >= 5 && hora < 12) {
         // BOM DIA
         img.src = '/exercicio-2/assets/manha.jpg';
         fundo.style.background = "#c5ebea";
@@ -32,7 +32,15 @@ function carregar() {
         header[0].style.color = "black";
         header[1].style.color = "black";
     
-    } else {
+    } else if (hora >=0 && hora < 5) {
+        img.src = '/exercicio-2/assets/madrugada.png';
+        fundo.style.background = "rgba(40, 90, 150, 0.30)";
+        document.body.style.background = "rgba(05, 06, 31, 0.90)";
+        header[0].style.color = "white";
+        header[1].style.color = "white";
+
+    }
+     else {
         //BOA NOITE
         img.src = '/exercicio-2/assets/noite.jpg';
         fundo.style.background = "rgba(65, 26, 91, 0.2)";
