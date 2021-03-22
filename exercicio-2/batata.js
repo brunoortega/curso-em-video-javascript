@@ -16,7 +16,7 @@ function carregar() {
     
     if (hora >= 0 && hora < 12) {
         // BOM DIA
-        img.src = '/exercicio 1/assets/manha.jpg';
+        img.src = '/exercicio-2/assets/manha.jpg';
         fundo.style.background = "#c5ebea";
         document.body.style.background = "#31d6d2";
         msg.style.color = "black";
@@ -25,7 +25,7 @@ function carregar() {
 
     } else if (hora >=12 && hora < 18) {
         // BOA TARDE
-        img.src = '/exercicio 1/assets/tarde.jpg';
+        img.src = '/exercicio-2/assets/tarde.jpg';
         fundo.style.background = "#face93";
         document.body.style.background = "#ed931c";
         msg.style.color = "black";
@@ -34,10 +34,10 @@ function carregar() {
     
     } else {
         //BOA NOITE
-        img.src = '/exercicio 1/assets/noite.jpg';
+        img.src = '/exercicio-2/assets/noite.jpg';
         fundo.style.background = "rgba(65, 26, 91, 0.2)";
         document.body.style.background = "rgba(4, 33, 108, 0.72)";
         header[0].style.color = "white";
         header[1].style.color = "white";
     }
-}
+}zz

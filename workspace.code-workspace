@@ -1,9 +1,6 @@
 {
 	"folders": [
 		{
-			"path": ".."
-		},
-		{
 			"name": "curso-em-video-javascript",
 			"path": "../curso-em-video-javascript"
 		}
